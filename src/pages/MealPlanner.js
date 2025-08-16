@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { User } from '../entities/User';
-import { Recipe } from '../entities/Recipe';
 import RecipeSelector from '../components/planner/RecipeSelector';
 import { Button } from '../components/ui/button';
 import { ChevronLeft, ChevronRight, Plus, Trash2, CalendarDays } from 'lucide-react';
@@ -150,7 +149,7 @@ export default function MealPlannerPage() {
                                     <p className="text-xs font-semibold text-gray-600 mb-1">{meal.label}</p>
                                     {plan ? (
                                         <div className="relative group bg-gray-100 rounded-md p-1 text-xs">
-                                            {plan.recipe_image_url && <img src={plan.recipe_image_url} className="w-full h-12 object-cover rounded-md mb-1"/>}
+                                            {plan.recipe_image_url && <img src={plan.recipe_image_url} alt={plan.recipe_name || "תמונה של מתכון"}  className="w-full h-12 object-cover rounded-md mb-1"/>}
                                             <p className="truncate font-medium">{plan.recipe_name}</p>
                                             <Button variant="ghost" size="icon" className="absolute top-0 left-0 h-5 w-5 opacity-0 group-hover:opacity-100 bg-red-500/50 hover:bg-red-500/80" onClick={() => handleRemovePlan(dateKey, meal.key)}>
                                                 <Trash2 className="h-3 w-3 text-white"/>

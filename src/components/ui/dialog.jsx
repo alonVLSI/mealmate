@@ -17,7 +17,7 @@ const Dialog = ({ children, open, onOpenChange }) => {
 
 const DialogContent = React.forwardRef(({ className, children, ...props }, ref) => (
   <div
-    ref__={ref}
+    ref={ref}
     className={cn(
       "relative bg-white rounded-lg shadow-lg w-full max-w-lg mx-4 p-6",
       className
@@ -32,12 +32,14 @@ const DialogHeader = ({ className, ...props }) => (
   <div className={cn("flex flex-col space-y-1.5 text-center sm:text-right", className)} {...props} />
 );
 
-const DialogTitle = React.forwardRef(({ className, ...props }, ref) => (
+const DialogTitle = React.forwardRef(({ className, children, ...props }, ref) => (
   <h2
-    ref__={ref}
+    ref={ref}
     className={cn("text-lg font-semibold leading-none tracking-tight", className)}
     {...props}
-  />
+  >
+    {children}
+  </h2>
 ));
 
 const DialogFooter = ({ className, ...props }) => (
@@ -46,7 +48,7 @@ const DialogFooter = ({ className, ...props }) => (
 
 const DialogClose = React.forwardRef(({ className, ...props }, ref) => (
   <button
-    ref__={ref}
+    ref={ref}
     className={cn("absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100", className)}
     {...props}
   >

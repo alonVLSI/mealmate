@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { User } from '../entities/User';
 import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '../components/ui/card';
+import { Card, CardContent } from '../components/ui/card';
 import { CreditCard, Lock, Loader2, AlertCircle, Check } from 'lucide-react';
 import { createPageUrl } from '../utils';
 

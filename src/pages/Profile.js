@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { User } from '../entities/User';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Gem, CheckCircle, ShieldCheck, Loader2, CreditCard, Calendar, User as UserIcon } from 'lucide-react';
+import { Gem, CheckCircle, ShieldCheck, CreditCard, User as UserIcon } from 'lucide-react';
 import { Skeleton } from '../components/ui/skeleton';
 import { format } from 'date-fns';
 import { he } from 'date-fns/locale';
